@@ -1,5 +1,5 @@
 # everyday_commands 
-preparation for the class 2021
+material for the course Bash for Beginners - February 2022
 
 ```r
 # make file  and move files inside them 
