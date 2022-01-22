@@ -1,3 +1,7 @@
+# lectures 
+
+https://stat447.com/lectures/01-shell/ # these lectures are great
+
 # everyday_commands 
 material for the course Bash for Beginners - February 2022
 
