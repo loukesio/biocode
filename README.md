@@ -1,3 +1,17 @@
+# screenshots_MAC
+A script to save screenshots in a directory other than Desktop
+
+
+#  Open Terminal type and press enter
+defaults write com.apple.screencapture type jpg  <Drag the folder you want to save to into the Terminal command box> 
+
+# Note!
+you can save your screenshots in a different format than jpg e.g., pdf 
+defaults write com.apple.screencapture type pdf
+
+
+
+
 # lectures 
 
 https://stat447.com/lectures/01-shell/ # these lectures are great
