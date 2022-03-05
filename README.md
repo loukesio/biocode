@@ -51,3 +51,10 @@ mv *.unassembled.* 7_unassembled
  #To determine how many files there are in the current directory, put in 
 
  ls -1 | wc -l
+ 
+ 
+ 
+ # References 
+ 
+ If you want to learn about alignment 
+https://www.youtube.com/watch?v=XU8atPxM0VQ
