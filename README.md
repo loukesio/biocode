@@ -1,6 +1,8 @@
-# screenshots_MAC
+# Screenshots MAC
 A script to save screenshots in a directory other than Desktop
 
+# Weather MAC
+A script to see weather in your terminal
 
 #  Open Terminal type and press enter
 defaults write com.apple.screencapture type jpg  <Drag the folder you want to save to into the Terminal command box> 
