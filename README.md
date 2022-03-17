@@ -70,6 +70,11 @@ mv *.unassembled.* 7_unassembled
  ### Get coverage with SAMtools 
  https://www.metagenomics.wiki/tools/samtools
  
+ 
+ ### minimap2 
+ to map a masked reference 
+ minimap2 -a Reference_barcodes.fasta subset_0-1-batch_S1_L001_R1_001.fasta > alignment.sam 
+ 
  # References 
  
  If you want to learn about alignment 
