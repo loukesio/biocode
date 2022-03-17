@@ -54,7 +54,21 @@ mv *.unassembled.* 7_unassembled
 
  ls -1 | wc -l
  
+ # How to make fastq to fasta 
+ ```
+ sed -n '1~4s/^@/>/p;2~4p' INFILE.fastq > OUTFILE.fasta
+ awk 'NR==1, NR==20' 0-1-batch_S1_L001_R1_001.fasta > subset_0-1-batch_S1_L001_R1_001.fasta
+ blastn -query subset_0-1-batch_S1_L001_R1_001.fasta -subject Reference_barcodes.fasta -out test_blast.txt
+```
  
+ https://bioinformaticsworkbook.org/dataWrangling/fastaq-manipulations/converting-fastq-format-to-fasta.html#gsc.tab=0
+ 
+ # Blast in your MAC 
+ 
+ https://www.youtube.com/watch?v=sU44ZtZlzo4&list=LL&index=24&t=90s
+ 
+ ### Get coverage with SAMtools 
+ https://www.metagenomics.wiki/tools/samtools
  
  # References 
  
