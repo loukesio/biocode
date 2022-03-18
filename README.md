@@ -72,7 +72,7 @@ samtools view -c -F 4 index_barcodes_alignment_sorted.bam
 
 samtools view -c -f 4 index_barcodes_alignment_sorted.bam
 
-# 6. Plot a depth of coverage across a bam file 
+## 6. Plot a depth of coverage across a bam file 
 
 [1] https://labs.epi2me.io/notebooks/Introduction_to_SAM_and_BAM_files.html
 
