@@ -85,6 +85,13 @@ Other important references:
 [6] https://davetang.github.io/learning_bam_file/#filtering-unmapped-reads : Notes from dave tang <br>
 
 
+
+### Minimap 
+to map a masked reference 
+minimap2 -a Reference_barcodes.fasta subset_0-1-batch_S1_L001_R1_001.fasta > alignment.sam 
+
+https://github.com/lh3/minimap2/blob/master/cookbook.md#map-sr
+
 # Screenshots MAC
 A script to save screenshots in a directory other than Desktop
 
