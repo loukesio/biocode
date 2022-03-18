@@ -1,3 +1,90 @@
+# samtools 
+
+## Installing samtools 
+
+```r
+cd ~
+# optional. you may already have a src directory
+mkdir src
+cd ~/src
+git clone https://github.com/samtools/htslib
+git clone https://github.com/samtools/samtools
+cd samtools
+make
+cp samtools ~/bin
+```
+
+now put in your folder the a sam file. My sam file is_ **barcodes_alignment.sam**_
+
+
+## 1. Check the header of your sam file 
+
+```
+head barcodes_alignment.sam
+
+>
+@SQ	SN:Reference_barcodes	LN:172
+@PG	ID:minimap2	PN:minimap2	VN:2.15-r905	CL:minimap2 -a Reference_barcodes.fasta subset_0-1-batch_S1_L00
+```
+your header should start with the sign "@",  which is an indicator for a header line. If you don't see lines starting with the "@" sign, the header information is most likely missing.
+
+If the header is absent from the SAM file use the command below, where reference.fa is the reference fasta file used to map the reads:
+
+samtools view -bT Reference_barcodes.fasta barcodes_alignment.sam > barcodes_alignment.bam
+
+## 2. Convert your sam file to bam file 
+
+```
+samtools view -S -b barcodes_alignment.sam > barcodes_alignment.bam
+```
+S indicates that give it a sam file 
+b indicates that you want bam out of it
+
+## 3. Sort the bam file 
+
+The sequences have the same order as in the fasta file that you used to map the reference. Always sort your BAM files; many downstream programs only take sorted BAM files.
+
+```
+samtools sort barcodes_alignment.bam -o barcodes_alignment_sorted.bam
+```
+## 4. Index the sorted bam file 
+A BAM index file is usually needed when visualising a BAM file.
+
+```
+samtools index barcodes_alignment_sorted.bam > index_barcodes_alignment_sorted.bam
+```
+## 5. Count the mapped reads 
+
+* count **all reads** in the bam file 
+
+```
+samtools idxstats index_barcodes_alignment_sorted.bam | awk '{s+=$3+$4} END {print s}'
+```
+
+* count only the **mapped** reads in the bam file
+```
+samtools idxstats index_barcodes_alignment_sorted.bam | awk '{s+=$3} END {print s}'
+
+samtools view -c -F 4 index_barcodes_alignment_sorted.bam
+```
+
+* count only the **unmapped** reads in the bam file 
+
+samtools view -c -f 4 index_barcodes_alignment_sorted.bam
+
+# 6. Plot a depth of coverage across a bam file 
+
+[1] https://labs.epi2me.io/notebooks/Introduction_to_SAM_and_BAM_files.html
+
+Other important references: 
+[1] http://quinlanlab.org/tutorials/samtools/samtools.html  : Notes from Quinlan lab
+[2] https://davetang.org/wiki/tiki-index.php?page=SAMTools  : Notes from wiki cms
+[3] http://www.novocraft.com/documentation/novoalign-2/novoalign-ngs-quick-start-tutorial/1040-2/ : extract unmapped reads from novo-align
+[4] https://www.metagenomics.wiki/tools/samtools/number-of-reads-in-bam-file : count unmapped reads, metagenomics notes
+[5] http://www.bioinf.uni-leipzig.de/publications/supplements/13-008 : reuse unmapped reads with segemehl
+[6] https://davetang.github.io/learning_bam_file/#filtering-unmapped-reads : Notes from dave tang
+
+
 # Screenshots MAC
 A script to save screenshots in a directory other than Desktop
 
