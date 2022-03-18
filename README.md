@@ -77,12 +77,12 @@ samtools view -c -f 4 index_barcodes_alignment_sorted.bam
 [1] https://labs.epi2me.io/notebooks/Introduction_to_SAM_and_BAM_files.html
 
 Other important references: 
-[1] http://quinlanlab.org/tutorials/samtools/samtools.html  : Notes from Quinlan lab
-[2] https://davetang.org/wiki/tiki-index.php?page=SAMTools  : Notes from wiki cms
-[3] http://www.novocraft.com/documentation/novoalign-2/novoalign-ngs-quick-start-tutorial/1040-2/ : extract unmapped reads from novo-align
-[4] https://www.metagenomics.wiki/tools/samtools/number-of-reads-in-bam-file : count unmapped reads, metagenomics notes
-[5] http://www.bioinf.uni-leipzig.de/publications/supplements/13-008 : reuse unmapped reads with segemehl
-[6] https://davetang.github.io/learning_bam_file/#filtering-unmapped-reads : Notes from dave tang
+[1] http://quinlanlab.org/tutorials/samtools/samtools.html  : Notes from Quinlan lab <br>
+[2] https://davetang.org/wiki/tiki-index.php?page=SAMTools  : Notes from wiki cms <br>
+[3] http://www.novocraft.com/documentation/novoalign-2/novoalign-ngs-quick-start-tutorial/1040-2/ : extract unmapped reads from novo-align <br>
+[4] https://www.metagenomics.wiki/tools/samtools/number-of-reads-in-bam-file : count unmapped reads, metagenomics notes <br>
+[5] http://www.bioinf.uni-leipzig.de/publications/supplements/13-008 : reuse unmapped reads with segemehl <br>
+[6] https://davetang.github.io/learning_bam_file/#filtering-unmapped-reads : Notes from dave tang <br>
 
 
 # Screenshots MAC
