@@ -83,7 +83,7 @@ Other important references:
 [4] https://www.metagenomics.wiki/tools/samtools/number-of-reads-in-bam-file : count unmapped reads, metagenomics notes <br>
 [5] http://www.bioinf.uni-leipzig.de/publications/supplements/13-008 : reuse unmapped reads with segemehl <br>
 [6] https://davetang.github.io/learning_bam_file/#filtering-unmapped-reads : Notes from dave tang <br>
-
+[7] https://qnot.org/2012/04/14/counting-the-number-of-reads-in-a-bam-file/ : Count number of reads thats very interesting
 
 
 ### Minimap 
