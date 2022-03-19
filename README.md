@@ -19,11 +19,10 @@ minimap2 -a Reference_barcodes.fasta subset_0-1-batch_S1_L001_R1_001.fasta > ali
 ```
 * Map to multiple samples using a for loop (snakemake might a better approach)
 
-https://github.com/lh3/minimap2/blob/master/cookbook.md#map-sr
 
 
 References:
-[1] https://github.com/lh3/minimap2/blob/master/cookbook.md#map-sr : Notes on minimap2
+[1] https://github.com/lh3/minimap2/blob/master/cookbook.md#map-sr : Cookbook on minimap2
 [2] https://forthebadge.com/ : How to add a badge
 [3] https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet : Markdown Cheatseat
 
