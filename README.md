@@ -82,6 +82,10 @@ A BAM index file is usually needed when visualising a BAM file.
 ```
 samtools index barcodes_alignment_sorted.bam > index_barcodes_alignment_sorted.bam
 ```
+
+**Important** : Use biosyntaxt to beautify the outcome of your sam file https://github.com/bioSyntax/bioSyntax
+samtools view -h NA19238.bam | sam-less -
+
 ## 5. Count the mapped reads 
 
 * count **all reads** in the bam file 
