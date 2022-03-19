@@ -79,16 +79,28 @@ samtools view -c -f 4 index_barcodes_alignment_sorted.bam
 Other important references: 
 [1] http://quinlanlab.org/tutorials/samtools/samtools.html  : Notes from Quinlan lab <br>
 [2] https://davetang.org/wiki/tiki-index.php?page=SAMTools  : Notes from wiki cms <br>
-[3] http://www.novocraft.com/documentation/novoalign-2/novoalign-ngs-quick-start-tutorial/1040-2/ : extract unmapped reads from novo-align <br>
+[3] http://www.novocraft.com/documentation/novoalign-2/novoalign-ngs-quick-start-tutorial/1040-2/ : extract unmapped reads from novo align <br>
 [4] https://www.metagenomics.wiki/tools/samtools/number-of-reads-in-bam-file : count unmapped reads, metagenomics notes <br>
 [5] http://www.bioinf.uni-leipzig.de/publications/supplements/13-008 : reuse unmapped reads with segemehl <br>
 [6] https://davetang.github.io/learning_bam_file/#filtering-unmapped-reads : Notes from dave tang <br>
 [7] https://qnot.org/2012/04/14/counting-the-number-of-reads-in-a-bam-file/ : Count number of reads thats very interesting
 
 
-### Minimap 
-to map a masked reference 
+# Minimap 
+
+## 1. Map to a masked reference 
+Minimap has worked perfectly for me to map millions of sequences into a masked referece which looks like this 
+```
+> Reference_barcodes.fasta
+GCTTGGGCCGATGTCCACGAAGCTCTCCTACGNNNNNNNNNNNNNNNNNNNNNNNNNCAGTCCAGCGCCAACCAGATA
+```
+the nice think of minimap is that you do not have to create an index of the reference. 
+* Map to one sample
+
+```
 minimap2 -a Reference_barcodes.fasta subset_0-1-batch_S1_L001_R1_001.fasta > alignment.sam 
+```
+* Map to multiple samples using a for loop (snakemake might a better approach)
 
 https://github.com/lh3/minimap2/blob/master/cookbook.md#map-sr
 
