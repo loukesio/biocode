@@ -1,4 +1,34 @@
-# samtools 
+![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
+[![forthebadge](https://forthebadge.com/images/badges/works-on-my-machine.svg)](https://forthebadge.com)
+
+
+# Minimap <br>
+---
+
+## 1. Map to a masked reference 
+Minimap has worked perfectly for me to map millions of sequences into a masked referece which looks like this 
+```
+> Reference_barcodes.fasta
+GCTTGGGCCGATGTCCACGAAGCTCTCCTACGNNNNNNNNNNNNNNNNNNNNNNNNNCAGTCCAGCGCCAACCAGATA
+```
+the nice think of minimap is that you do not have to create an index of the reference. 
+* Map to one sample
+
+```
+minimap2 -a Reference_barcodes.fasta subset_0-1-batch_S1_L001_R1_001.fasta > alignment.sam 
+```
+* Map to multiple samples using a for loop (snakemake might a better approach)
+
+https://github.com/lh3/minimap2/blob/master/cookbook.md#map-sr
+
+
+References:
+[1] https://github.com/lh3/minimap2/blob/master/cookbook.md#map-sr : Notes on minimap2
+[2] https://forthebadge.com/ : How to add a badge
+[3] https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet : Markdown Cheatseat
+
+# samtools <br>
+---
 
 ## Installing samtools 
 
@@ -86,23 +116,6 @@ Other important references:
 [7] https://qnot.org/2012/04/14/counting-the-number-of-reads-in-a-bam-file/ : Count number of reads thats very interesting
 
 
-# Minimap 
-
-## 1. Map to a masked reference 
-Minimap has worked perfectly for me to map millions of sequences into a masked referece which looks like this 
-```
-> Reference_barcodes.fasta
-GCTTGGGCCGATGTCCACGAAGCTCTCCTACGNNNNNNNNNNNNNNNNNNNNNNNNNCAGTCCAGCGCCAACCAGATA
-```
-the nice think of minimap is that you do not have to create an index of the reference. 
-* Map to one sample
-
-```
-minimap2 -a Reference_barcodes.fasta subset_0-1-batch_S1_L001_R1_001.fasta > alignment.sam 
-```
-* Map to multiple samples using a for loop (snakemake might a better approach)
-
-https://github.com/lh3/minimap2/blob/master/cookbook.md#map-sr
 
 # Screenshots MAC
 A script to save screenshots in a directory other than Desktop
