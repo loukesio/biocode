@@ -109,6 +109,18 @@ samtools view -c -f 4 index_barcodes_alignment_sorted.bam
 
 [1] https://labs.epi2me.io/notebooks/Introduction_to_SAM_and_BAM_files.html
 
+## 7. Remove sequences that map to a specific area in the genome 
+
+bedtools intersect -abam file.bam -b filter.bed -v > filtered.bam
+filter.bed should contain
+
+chr    start     end
+
+and maybe 
+samtools view input.bam -b -h -o output_inRegions.bam -U output_outRegions.bam -L Regions.bed
+
+
+
 Other important references: <br>
 [1] http://quinlanlab.org/tutorials/samtools/samtools.html  : Notes from Quinlan lab <br>
 [2] https://davetang.org/wiki/tiki-index.php?page=SAMTools  : Notes from wiki cms <br>
