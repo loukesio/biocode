@@ -132,3 +132,22 @@ Other important references: <br>
 [8] https://comppopgenworkshop2019.readthedocs.io/en/latest/contents/02_bam_files/bam_files.html : Impressive Converting, Filtering SAM and BAM Files
 
 
+# Comments: 
+
+### Merge files from different lanes 
+If your files come into multiple lanes you can concatenate them using the following code: 
+
+```
+for i in $(find ./ -type f -name "*.fastq.gz" | while read F; do basename $F | rev | cut -c 22- | rev; done | sort | uniq)
+
+    do echo "Merging R1"
+
+cat "$i"_L00*_R1_001.fastq.gz > "$i"_ME_L001_R1_001.fastq.gz
+
+       echo "Merging R2"
+
+cat "$i"_L00*_R2_001.fastq.gz > "$i"_ME_L001_R2_001.fastq.gz
+
+done
+```
+
