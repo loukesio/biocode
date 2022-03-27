@@ -151,3 +151,12 @@ cat "$i"_L00*_R2_001.fastq.gz > "$i"_ME_L001_R2_001.fastq.gz
 done
 ```
 
+### Copy-paste the contents of folder to another folder 
+
+```
+cp -a /source/. /dest/
+```
+
+The -a option is an improved recursive option, that preserve all file attributes, and also preserve symlinks.
+
+The . at end of the source path is a specific cp syntax that allow to copy all files and folders, included hidden ones.
