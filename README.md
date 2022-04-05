@@ -134,6 +134,13 @@ Other important references: <br>
 
 # Comments: 
 
+### Use taxonomic profile softwares in your raw data 
+You can use 
+* [Kraken2](https://github.com/DerrickWood/kraken2/wiki)
+* [Kaiju](https://github.com/bioinformatics-centre/kaiju) <br>
+and you can visualise everything using <br>
+* [Kronatools](https://github.com/marbl/Krona)
+
 ### Merge files from different lanes 
 If your files come into multiple lanes you can concatenate them using the following code: 
 
