@@ -148,6 +148,7 @@ kraken2-build --standard --threads 24 --db kraken_db
 ```
 2. run your data over the db
 ```
+kraken2 --paired --threads {threads} -db {params.db} --confidence 0.5 --output output/ cleandata/sample1_clean_R1.fq cleandata/sample1_clean_R2.fq ... cleandata/samplen_clean_R1.fq cleandata/samplen_clean_R2.fq
 ```
 3. use kraken output to Krona 
 ```
