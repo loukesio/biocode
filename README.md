@@ -155,7 +155,7 @@ kraken2 --paired --threads {threads} -db {params.db} --confidence 0.5 --output o
 ktImportTaxonomy -q 2 -t 3 Sample1.txt Sample2.txt -o krona.html 
 ```
 References: <br>
-[1] https://bioinformaticsworkbook.org/dataAnalysis/Metagenomics/Kraken.html#gsc.tab=0  : adding kraken details
+[1] https://genomics.sschmeier.com/ngs-taxonomic-investigation/index.html : thats the best kraken turorial I ve found so far
 
 ### Merge files from different lanes 
 If your files come into multiple lanes you can concatenate them using the following code: 
