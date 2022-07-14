@@ -183,3 +183,12 @@ cp -a /source/. /dest/
 The -a option is an improved recursive option, that preserve all file attributes, and also preserve symlinks.
 
 The . at end of the source path is a specific cp syntax that allow to copy all files and folders, included hidden ones.
+
+
+
+# Favorite bioinformative software and adding a thing into my path 
+https://astrobiomike.github.io/unix/installing_tools#my-bioinformatics-tools-bit
+https://astrobiomike.github.io/unix/modifying_your_path
+
+
+
