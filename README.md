@@ -188,9 +188,9 @@ The . at end of the source path is a specific cp syntax that allow to copy all f
 
 ## Add your favourite websites that contain bioinfromatic software 
 
-https://astrobiomike.github.io/unix/installing_tools#my-bioinformatics-tools-bit
-https://astrobiomike.github.io/unix/modifying_your_path
-http://maasha.github.io/biopieces/
+https://astrobiomike.github.io/unix/installing_tools#my-bioinformatics-tools-bit <br>
+https://astrobiomike.github.io/unix/modifying_your_path <br>
+http://maasha.github.io/biopieces/ <br>
 
 
 
