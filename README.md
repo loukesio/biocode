@@ -174,6 +174,12 @@ cat "$i"_L00*_R2_001.fastq.gz > "$i"_ME_L001_R2_001.fastq.gz
 done
 ```
 
+Also check the following commands which might be very useful to you <br>
+1. https://unix.stackexchange.com/questions/394479/concatenating-multiple-fastq-files <br>
+2. https://unix.stackexchange.com/questions/436771/how-to-concatenate-rna-seq-files-generated-in-differnt-lanes <br>
+3. https://unix.stackexchange.com/questions/615815/for-loop-to-catenate-files-with-two-variables <br>
+
+
 ### Copy-paste the contents of folder to another folder 
 
 ```
@@ -191,6 +197,18 @@ The . at end of the source path is a specific cp syntax that allow to copy all f
 https://astrobiomike.github.io/unix/installing_tools#my-bioinformatics-tools-bit <br>
 https://astrobiomike.github.io/unix/modifying_your_path <br>
 http://maasha.github.io/biopieces/ <br>
+
+
+## How to find tRNAs and rRNAs in your genome? 
+
++ To find tRNAs you can use <br>
+    - A BLAT search in the USSC browser https://genome.ucsc.edu/cgi-bin/hgBlat <br>
+    - tRNA scan is useful for sequences less than a 1Million bp http://trna.ucsc.edu/tRNAscan-SE/ <br>
+    - tRNA finder seems crap https://ei4web.yz.yamagata-u.ac.jp/~kinouchi/tRNAfinder/
+
++ To find rRNAs you can use <br>
+    - barrnap https://github.com/tseemann/barrnap
+    - BLAST using an rRNA database
 
 
 
