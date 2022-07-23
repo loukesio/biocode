@@ -208,6 +208,7 @@ http://maasha.github.io/biopieces/ <br>
 
 + To find rRNAs you can use <br>
     - barrnap https://github.com/tseemann/barrnap
+    - https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-021-04316-z this paper contains a lot of info about rRNA prediction
     - BLAST using an rRNA database
 
 
