@@ -247,6 +247,9 @@ Finally there are some pitfalls that you need to take into consideration when us
  - barcode leakage can be a problem when doing multiplex seqencing
  - heterogeneity either structutal at pahge excision point or you do not sequence a clonal population 
 
+references 
+[1] Assembling the perfect bacterial genome using Oxford Nanopore and Illumina sequencing, PLOS Computational Biology 
+
 
 
 
