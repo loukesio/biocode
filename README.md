@@ -250,6 +250,24 @@ Finally there are some pitfalls that you need to take into consideration when us
 references 
 [1] Assembling the perfect bacterial genome using Oxford Nanopore and Illumina sequencing, PLOS Computational Biology 
 
+# How can I use docker in R 
+
+Docker operates through three primary components: the client, the daemon, and the registry.
+
+- The client is the command-line tool or interface you use to interact with Docker. When you issue commands like docker run or docker build, you're using the client to send these commands to Docker.
+
+- The daemon is a background process that manages Docker images and containers on a system. It's responsible for building, running, and managing these containers based on commands received from the client.
+
+- The registry is a storage location where Docker images are hosted and distributed. Docker Hub is a popular public registry, but there are also private registries.
+
+To create a new Docker image, you'd typically use a Dockerfile. This file contains a set of instructions that describe the desired environment, software installations, and configurations. Once the Dockerfile is ready, you'd use the command docker build to instruct the Docker daemon to build a new image based on this file.
+
+After the image is built, you can run it using the docker run command. This creates and starts a container from the specified image, enabling you to use the software and environment defined in that image.
+If you need to set up configurations or modify containers without immediately starting them, you can use the docker create command, which creates a container without initiating it.
+
+I will update you soon on how to to create private registries...
+
+
 
 
 
